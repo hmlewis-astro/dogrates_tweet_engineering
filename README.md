@@ -1,4 +1,4 @@
-# TITLE GOES HERE
+# Highlighting Overlooked Dogs on WeRateDogs Twitter
 
 This project was developed for the Introduction to Data Engineering module of the Data Science and Machine Learning Bootcamp at Metis.
 
