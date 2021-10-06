@@ -1,6 +1,6 @@
 # TITLE GOES HERE
 
-This project was developed for the Data Engineering module of the Data Science and Machine Learning Bootcamp at Metis.
+This project was developed for the Introduction to Data Engineering module of the Data Science and Machine Learning Bootcamp at Metis.
 
 The project proposal is available [here](https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/proposal.md).
 
