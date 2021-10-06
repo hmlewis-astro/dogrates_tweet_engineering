@@ -1,0 +1,19 @@
+# Ignore temp files from other editors
+~*
+
+# Ignore pycache
+*.DS_Store
+*.pyc
+.ipynb_checkpoints/
+
+# Ignore data backups and notes
+data_backup/
+
+
+# Ignore API key files
+twitter_api_key.py
+
+# Ignore powerpoint files
+*.pptx
+final_pres/*.pptx
+
