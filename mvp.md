@@ -16,6 +16,7 @@ For each image in the `media` collection, we use a deep learning convolutional n
 Below are a sample of the predicted dog breeds from this model. The model performs well for images that have some...:
 <p float="left" align="center">
   <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/american_staffordshire_terrier_example_pred.jpeg" title="American Staffordshire Terrier" width="400" />
+  <em>test_captions</em>
   <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/eskimo_dog_example_pred.jpeg" title="Eskimo Dog" width="400" />
   <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/bernese_mountain_dog_example_pred.jpeg" title="Bernese Mountain Dog" width="400" />
   <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/italian_greyhound_example_pred.jpeg" title="Italian Greyhound" width="400" />
