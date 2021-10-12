@@ -15,20 +15,20 @@ For each image in the `media` collection, we use a deep learning convolutional n
 
 Below are a sample of the predicted dog breeds from this model. The model performs well for images that have some...:
 <p float="left" align="center">
-  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/american_staffordshire_terrier_example_pred.jpeg" width="400" />
-  <b>Predicted breed: American Staffordshire Terrier</b>
+  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/american_staffordshire_terrier_example_pred.jpeg" width="400" /><br>
+  <b>Predicted breed:</b> American Staffordshire Terrier
   <br>
 
-  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/eskimo_dog_example_pred.jpeg" width="400" />
-  <b>Predicted breed: Eskimo Dog</b>
+  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/eskimo_dog_example_pred.jpeg" width="400" /><br>
+  <b>Predicted breed:</b> Eskimo Dog
   <br>
 
-  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/bernese_mountain_dog_example_pred.jpeg" width="400" />
-  <b>Predicted breed: Bernese Mountain Dog</b>
+  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/bernese_mountain_dog_example_pred.jpeg" width="400" /><br>
+  <b>Predicted breed:</b> Bernese Mountain Dog
   <br>
 
-  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/italian_greyhound_example_pred.jpeg" width="400" />
-  <b>Predicted breed: Italian Greyhound</b>
+  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/italian_greyhound_example_pred.jpeg" width="400" /><br>
+  <b>Predicted breed:</b> Italian Greyhound
 </p>
 
 The annotated images contain ~4.5% road and ~95.5% background pixels, so it will be important to score the model on F1 rather than accuracy, because high accuracy can be achieved by simply assuming that all pixels are background.
