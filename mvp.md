@@ -15,22 +15,22 @@ For each image in the `media` collection, we use a deep learning convolutional n
 
 Below are a sample of the predicted dog breeds from this model. The model performs well for images that have some...:
 <p float="left" align="center">
-  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/american_staffordshire_terrier_example_pred.jpeg" width="400" /><br>
+  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/american_staffordshire_terrier_example_pred.jpeg" width="256" /><br>
   <b>Predicted breed:</b> American Staffordshire Terrier
 </p>
 
 <p float="left" align="center">
-  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/eskimo_dog_example_pred.jpeg" width="400" /><br>
+  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/eskimo_dog_example_pred.jpeg" width="256" /><br>
   <b>Predicted breed:</b> Eskimo Dog
 </p>
 
 <p float="left" align="center">
-  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/bernese_mountain_dog_example_pred.jpeg" width="400" /><br>
+  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/bernese_mountain_dog_example_pred.jpeg" width="256" /><br>
   <b>Predicted breed:</b> Bernese Mountain Dog
 </p>
 
 <p float="left" align="center">
-  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/italian_greyhound_example_pred.jpeg" width="400" /><br>
+  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/italian_greyhound_example_pred.jpeg" width="256" /><br>
   <b>Predicted breed:</b> Italian Greyhound
 </p>
 
