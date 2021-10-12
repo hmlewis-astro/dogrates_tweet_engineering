@@ -8,7 +8,7 @@
 
 # Ignore data backups and notes
 data_backup/
-
+*.json
 
 # Ignore API key files
 twitter_api_key.py
