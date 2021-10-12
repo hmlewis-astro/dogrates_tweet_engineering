@@ -116,9 +116,3 @@ for tweet in tqdm(tweets.find(), total=tweets.estimated_document_count()):
     top_breeds = [breed_name(i) for i in top_components]
     top_breeds = list(map(split_breed_name, top_breeds))
     tweets.update_one({'id': tweet['id']}, {"$set": {"predicted_breed": top_breeds}})
-
-random_idx = list(np.random.choice(range(tweets.estimated_document_count()), size=10))
-for i,tweet in tqdm(enumerate(tweets.find()), total=tweets.estimated_document_count()):
-    if i in random_idx:
-        print(tweet)
-        print('\n')
