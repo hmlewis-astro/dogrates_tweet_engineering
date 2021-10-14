@@ -1,7 +1,7 @@
 # Ignore temp files from other editors
 ~*
 
-# Ignore pycache
+# Ignore OS generated files and pycache
 *.DS_Store
 *.pyc
 .ipynb_checkpoints/
@@ -10,8 +10,9 @@
 data_backup/
 *.json
 
-# Ignore API key files
+# Ignore API/key files
 twitter_api_key.py
+dogrates_pipeline_private_key.sh
 
 # Ignore powerpoint files
 *.pptx
