@@ -30,9 +30,13 @@ After testing various combinations of optimizers, loss functions, dropout amount
 
 Below are a sample of the predicted road maps from the final model, with the satellite image on the left, the hand-annotated road map in the center, and the predicted road map on the right:
 <p float="left" align="center">
-  <img src="https://github.com/hmlewis-astro/street_network_deep_learning/blob/main/figures/predicted_road_map_final_model_3448.png" width="700" />
-  <img src="https://github.com/hmlewis-astro/street_network_deep_learning/blob/main/figures/predicted_road_map_final_model_2066.png" width="700" />
-  <img src="https://github.com/hmlewis-astro/street_network_deep_learning/blob/main/figures/predicted_road_map_final_model_5161.png" width="700" />
+  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/american_staffordshire_terrier_example_pred.jpeg" width="256" /><br>
+  <b>Predicted breed:</b> American Staffordshire Terrier
+</p>
+
+<p float="right" align="center">
+  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/eskimo_dog_example_pred.jpeg" width="256" /><br>
+  <b>Predicted breed:</b> Eskimo Dog
 </p>
 
 
@@ -44,7 +48,7 @@ Below are satellite images taken before and after the impact of Hurricane Ida, a
 
 The web app is currently active, and available at the link below:
 
-<h2>[The Underdogs](https://the-underdogs-app.herokuapp.com/)</h2>
+<h2><a href='https://the-underdogs-app.herokuapp.com/'>The Underdogs</a></h2>
 
 
 ### Tools
