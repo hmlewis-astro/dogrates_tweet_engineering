@@ -1,5 +1,5 @@
 # Project Write-Up
-## Road Maps from Satellite Images for Disaster Relief Networks
+## The Underdogs: a Heroku web app highlighting underappreciated dogs tweeted by WeRateDogs
 
 
 ### Abstract
@@ -42,19 +42,22 @@ I also applied the model to images released by Maxar showing the impact of Hurri
 
 Below are satellite images taken before and after the impact of Hurricane Ida, along with the predicted road maps from the model presented here. In the first set of figures, after the impact of the hurricane, no accessible roads are identified by the model; in the second set of figures, the only accessible road identified by the model is a raised bridge.
 
-<p float="left" align="center">
-  <img src="https://github.com/hmlewis-astro/street_network_deep_learning/blob/main/figures/hurricane_ida_predicted_road_map_final_model_0.png" width="700" />
-  <img src="https://github.com/hmlewis-astro/street_network_deep_learning/blob/main/figures/hurricane_ida_predicted_road_map_final_model_1.png" width="700" />
-</p>
+The web app is currently active, and available at the link below:
+
+<h2>[The Underdogs](https://the-underdogs-app.herokuapp.com/)</h2>
 
 
 ### Tools
-- Pandas and Numpy for data analysis and exploration
-- Tensorflow and Keras for building, tuning, training, and testing the various baseline and final models
+- Twitter API and `tweepy` for data collection
+- MongoDB for local database storage, MongoDB Atlas for cloud database storage
+- Tensorflow and Keras for building, tuning, training, and testing the deep learning model
 - Google Colab (with GPU) for computing
-- OpenCV for image processing
-- Matplotlib and visualkeras for plotting and visualizations
+- Streamlit for app development
+- Twitter Publish oEmbed API for generating Tweet embedding HTML
+- FormSubmit API and email service for HTML form
+- Heroku for app deployment
+
 
 ### Communication
 
-In addition to the slides and visuals presented here, this write-up and included visuals will be included in a forthcoming blog post.
+In addition to the slides and visuals presented here, the app will be highlighted on my LinkedIn and personal website.

@@ -12,7 +12,7 @@ The code for this analysis is broken into multiple pieces to avoid re-running pi
 - `final_model_predictions.py` &mdash; breed prediction are made (from the dog breed classification model) for all images and video thumbnails in the `media` collection of the `dog_rates_images` MongoDB database in [this script](https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/final_model_predictions.py)
 
 #### Automated processes
-- `dogrates_pipeline.sh` &mdash; [this shell script](https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/dogrates_pipeline.sh) runs each of the scripts required for data collection, processing, and storage automatically, and then runs `mongoimport` to serve the updated `tweets` and `media` collections to a cloud database on MongoDB Atlas; this cloud database is accessible by the deployed Streamlit app
+- `dogrates_pipeline.sh` &mdash; [this shell script](https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/dogrates_pipeline.sh) runs each of the scripts required for data collection, processing, and storage automatically, and then runs `mongoimport` to serve the updated `tweets` and `media` collections to a cloud database on MongoDB Atlas; the script is run as a cron job daily
 
-#### Streamlit webapp
-- The source code for the deployed webapp is available [here](https://github.com/hmlewis-astro/dogrates_tweet_app).
+#### Streamlit web app
+- The source code for the deployed web app is available [here](https://github.com/hmlewis-astro/dogrates_tweet_app).
