@@ -9,9 +9,11 @@ The goal of this project was to create a deep neural network to extract road map
 
 ### Design
 
-Remote satellite images are an extremely valuable resource in disaster zones, where maps and accessibility information are crucial for emergency response networks to delivery aid. Rather than relying on ground-based efforts to determine areas in most dire need of immediate aid, high-resolution satellite imagery can be used to identify impacted areas. However, disaster zones may span large land areas; meticulously searching satellite images by-hand can be time consuming and delay the dispatching of life-saving aid. In these cases, deep learning can play an important role. Specifically, a neural net trained to extract road maps from satellite images can be applied to images taken before and after a disaster to identify roads that have become inaccessible following a disaster.
+Though the popular Twitter account WeRateDogs ([@dog_rates](https://twitter.com/dog_rates)) is primarily a light-hearted source for adorable dog pics, with witty captions and ratings, the account also frequently posts fundraisers for dogs, dog shelters, and rescues in need. Most of these fundraisers&mdash;particularly those for individual dogs&mdash;meet their goals within minutes of being shared by the account; however, some of the larger fundraising efforts get lost in the social media shuffle, and the dogs included in them don't get as much love from the Twitter-verse as others.
 
-In this project, I seek to create a deep neural network to extract road maps from satellite images, and to apply this neural network to images of disaster zones collected before and after the onset of major crisis events.
+In this project, I have deployed a web app that highlights Tweets with some of the least loved (i.e., least favorited) dogs posted by the WeRateDogs Twitter account&mdash;**The Underdogs**. By increasing the visibility of these particular dogs and associated fundraising efforts, I hope to ensure that all future fundraisers reach their goal. These dogs are highlighted on an [active web app](https://the-underdogs-app.herokuapp.com/).
+
+I have also implemented a deep learning neural network to identify the breed of the dog in each post, allowing web app users to view Tweets including dogs of a breed of their choosing.
 
 ### Data
 
@@ -32,15 +34,15 @@ note, the number of neurons in the output layer is determined by the number of b
 Below are a sample of the predictions from this model for unseen images (i.e., those tweeted by WeRateDogs). The model performs very well for images that have little or no material obscuring the dog's face/body; however, the model does not perform well when a majority of the dog's face/body are covered. The model also
 
 <p float="left" align="center">
-  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/american_staffordshire_terrier_example_pred.jpeg" height="400" />
-  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/eskimo_dog_example_pred.jpeg" height="400" />
+  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/american_staffordshire_terrier_example_pred.jpeg" height="300" />
+  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/eskimo_dog_example_pred.jpeg" height="300" />
   <br>
   <b>(Left) predicted breed:</b> American Staffordshire Terrier; <b>(right) predicted breed:</b> Eskimo Dog
 </p>
 
 <p float="left" align="center">
-  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/bernese_mountain_dog_example_pred.jpeg" height="400" />
-  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/italian_greyhound_example_pred.jpeg" height="400" />
+  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/bernese_mountain_dog_example_pred.jpeg" height="300" />
+  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/italian_greyhound_example_pred.jpeg" height="300" />
   <br>
   <b>(Left) predicted breed:</b> Bernese Mountain Dog; <b>(right) predicted breed:</b> Italian Greyhound
 </p>
@@ -54,7 +56,9 @@ The resulting database and deep learning model are deployed in a web app on Hero
 
 The web app is currently active, and available at the link below:
 
-<h2><a href='https://the-underdogs-app.herokuapp.com/'>The Underdogs</a></h2>
+<a href='https://the-underdogs-app.herokuapp.com/'>The Underdogs</a>
+
+The code for the web app is available [here](https://github.com/hmlewis-astro/dogrates_tweet_app).
 
 
 ### Tools
@@ -70,4 +74,4 @@ The web app is currently active, and available at the link below:
 
 ### Communication
 
-In addition to the slides and visuals presented here, the app will be highlighted on my LinkedIn and personal website.
+In addition to the slides and visuals presented here, the app will be highlighted on my LinkedIn and personal website/blog.
