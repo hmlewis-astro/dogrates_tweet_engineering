@@ -15,18 +15,19 @@ In this project, I seek to create a deep neural network to extract road maps fro
 
 ### Data
 
-The DeepGlobe 2018 Road Extraction Challenge provide ~6,200 satellite images _with_ available hand-annotated road masks captured over Thailand, Indonesia, and India. Each image is 1024 pixels &times; 1024 pixels &times; 3 color channels (red, green, blue), with a pixel resolution of 0.5 meters/pixel. The images sample rural and urban areas, different types of road surfaces (unpaved, paved, dirt roads), etc., illumination conditions, and road densities.
+Tweet text, and associated media, hashtags, urls, favorite/retweet counts, etc. from the WeRateDogs Twitter account were obtained using the Twitter API. The Tweet documents were added to collection within a MongoDB database, and the urls pointing to the images and video thumbnails from each Tweet were added to a second collection.
 
-In pre-processing the data, to save RAM, the images are reduced to size 256 pixels &times; 256 pixels &times; 3 color channels, and the annotated masks are reduced to size 256 pixels &times; 256 pixels. In future iterations of this work, images will _not_ be reduced in size, and, instead, will be loaded in batches into RAM.
+At the time of this publication, the data are composed of ~600 total rating Tweets (i.e., Tweets containing ratings, out of 10 for the featured dog) out of the 3,200 pulled from this account, spanning December 2019 through mid-October 2021. However, the script used to obtain these Tweets has been fully automated to check for new Tweets daily, such that the available Tweets in the dataset will continue to grow. Each Tweet has 1-4 associated images/video thumbnails (average of 2 images per Tweet), and the collection contains ~1,300 images total.
 
-I also apply this neural network to images released by [Maxar's Open Data program](https://www.maxar.com/open-data/) collected before and after Hurricane Ida hit New Orleans in August 2021. Though these images are not a standard size (i.e., not all are 1024 pixels &times; 1024 pixels), each image has the same 3 color channels (red, green, blue) and pixel resolution.
+These documents all have varying schema, because each Tweet has a different number of included images, different included entities (hashtags, emojis, etc.). The database has been well-tested and new Tweet data can easily be added with an automated process.
 
 
 ### Algorithms
 
-The baseline model is built with a U-Net-like architecture, following the example laid out in the [keras documentation](https://keras.io/examples/vision/oxford_pets_image_segmentation/). The model is composed of an encoder&mdash;which takes image inputs from the training set, and performs the convolution and pools/downsamples&mdash;and a decoder&mdash;which takes as input the pooled indices from the final encoder pooling layer, and deconvolves and unpools/upsamples&mdash;to predict pixel-wise class labels (here, background or road). The ReLU activation function is applied in all layers. The encoder-decoder framework is followed by an output layer consisting of a 2D convolution with 1 neuron and the sigmoid activation function. The baseline model used the `adam` optimizer, binary cross-entropy as the loss function, and was scored based on the accuracy (95.34%); however, because the annotated images contain ~5% road and ~95% background pixels, high accuracy can be achieved by a baseline model by simply assuming that all pixels are background. For this reason, all future iterations of the model were scored on F1 (the standard metric for aerial image segmentation models).
+The data are cleaned, explored, and processed using basic MongoDB queries. Only those Tweets containing "ratings", i.e., out of 10, along with an image and/or video of a featured dog are removed from the database. MongoDB queries are also used to identify Tweets with in the bottom 10% of favorite counts; these Tweets are displayed on the web app (described below).
 
-After testing various combinations of optimizers, loss functions, dropout amounts, etc., the final model includes dropout layers between each convolutional block, and `RMSprop` optimizer is used with the binary cross-entropy loss function. The architecture of the final model can be found [here](https://github.com/hmlewis-astro/street_network_deep_learning/blob/main/unet_final_model_architecture.png). The final model achieves an F1 = 0.690, and performs well on rural and urban landscapes, and varying road surfaces and densities.
+Further, I built, trained, and tested a deep learning convolutional neural network to identify the breed of dog in each available image. The model uses transfer learning by assuming a MobileNetV2 architecture with the pre-trained ImageNet weights as a base model, followed by a batch normalization layer, a max pooling layer, a dense layer (with the ReLU activation function), a dropout layer, and, finally, an output layer with 120 neurons (with the softmax activation function). The model is trained on the  [Stanford Dogs dataset](https://www.tensorflow.org/datasets/catalog/stanford_dogs), which is composed of more than 20,000 total images containing 120 different dog breeds;
+note, the number of neurons in the output layer is determined by the number of breeds in the dataset. The final model attains a precision of 0.8544 and a top _k_ categorical accuracy (_k_ = 3) of 0.9021.
 
 Below are a sample of the predictions from this model for unseen images (i.e., those tweeted by WeRateDogs). The model performs very well for images that have little or no material obscuring the dog's face/body; however, the model does not perform well when a majority of the dog's face/body are covered. The model also
 
@@ -44,12 +45,12 @@ Below are a sample of the predictions from this model for unseen images (i.e., t
   <b>(Left) predicted breed:</b> Bernese Mountain Dog; <b>(right) predicted breed:</b> Italian Greyhound
 </p>
 
+MongoDB queries are also used to get a sample of Tweets containing a specific breed in the web app.
 
-#### Application & Visualization
 
-I also applied the model to images released by Maxar showing the impact of Hurricane Ida on New Orleans in August 2021. Though only a handful of images are publicly available currently, they show some of the areas most impacted by this event, with significant flooding covering almost all visible land area after the hurricane hit, as shown by the figure below. The model does not identify many (if any) roads in the post-event images, as expected, given that the available images generally show the areas with the worst outcomes from the hurricane.
+#### Web Application
 
-Below are satellite images taken before and after the impact of Hurricane Ida, along with the predicted road maps from the model presented here. In the first set of figures, after the impact of the hurricane, no accessible roads are identified by the model; in the second set of figures, the only accessible road identified by the model is a raised bridge.
+The resulting database and deep learning model are deployed in a web app on Heroku. The app shows a sample of 3 Tweets that are among the bottom 10% of favorite counts received by Tweets on this account. The app also allows the user to select a dog breed and displays a sample of up to 3 Tweets containing dogs of the selected breed, where the breed in each Tweet is predicted by the deep learning classification model described above. Finally, the web app provides a working contact form for bug reports, comments, questions, etc.
 
 The web app is currently active, and available at the link below:
 
