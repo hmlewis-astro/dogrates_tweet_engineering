@@ -4,14 +4,14 @@
 
 ### Abstract
 
-The goal of this project was to create a deep neural network to extract road maps from satellite images, with the ultimate objective of applying this network to images of disaster zones collected before and after the onset of major crisis events (e.g., earthquakes, floods, etc.) to identify accessible roads. I utilized data from the Road Extraction Challenge in [DeepGlobe 2018 (Demir et al. 2018)](https://arxiv.org/pdf/1805.06561.pdf) to build an image segmentation convolutional neural net with a U-Net-like architecture; the model is tuned to optimize the F1-score, and attains F1 = 0.690. After finalizing the optimum model weights, I applied the model to images of New Orleans, Louisiana collected before and after the impact of Hurricane Ida in August 2021 to identify roads that remained accessible (i.e., not flooded).
+The goal of this project was to deploy a web app to show some of the least-favorited dogs tweeted by the popular WeRateDogs Twitter account, with the ultimate goal of highlighting fundraising efforts that may have been underfunded when original posted. I utilized the Twitter API to obtain Tweets from this account, and stored the resulting documents in a cloud database via MongoDB Atlas. I also built a deep learning neural network to classify dog breeds, and applied the model to identify the breed of dog featured in each Tweet. Web app users can choose a specific breed of dog and view Tweets including that breed. These data collection, cleaning, and storage processes have been fully automated (via a cron job), so the database accessed by the active web app is up to date with the most recent WeRateDogs Tweets (within 24 hours or less).
 
 
 ### Design
 
 Though the popular Twitter account WeRateDogs ([@dog_rates](https://twitter.com/dog_rates)) is primarily a light-hearted source for adorable dog pics, with witty captions and ratings, the account also frequently posts fundraisers for dogs, dog shelters, and rescues in need. Most of these fundraisers&mdash;particularly those for individual dogs&mdash;meet their goals within minutes of being shared by the account; however, some of the larger fundraising efforts get lost in the social media shuffle, and the dogs included in them don't get as much love from the Twitter-verse as others.
 
-In this project, I have deployed a web app that highlights Tweets with some of the least loved (i.e., least favorited) dogs posted by the WeRateDogs Twitter account&mdash;**The Underdogs**. By increasing the visibility of these particular dogs and associated fundraising efforts, I hope to ensure that all future fundraisers reach their goal. These dogs are highlighted on an [active web app](https://the-underdogs-app.herokuapp.com/).
+In this project, I have deployed a web app that highlights Tweets with some of the least loved (i.e., fewest favorites) dogs posted by the WeRateDogs Twitter account&mdash;**The Underdogs**. By increasing the visibility of these particular dogs and associated fundraising efforts, I hope to ensure that all future fundraisers reach their goal. These dogs are highlighted on an [active web app](https://the-underdogs-app.herokuapp.com/).
 
 I have also implemented a deep learning neural network to identify the breed of the dog in each post, allowing web app users to view Tweets including dogs of a breed of their choosing.
 
