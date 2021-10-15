@@ -4,7 +4,7 @@
 
 ### Abstract
 
-The goal of this project was to deploy a web app to show some of the least-favorited dogs tweeted by the popular WeRateDogs Twitter account, with the ultimate goal of highlighting fundraising efforts that may have been underfunded when original posted. I utilized the Twitter API to obtain Tweets from this account, and stored the resulting documents in a cloud database via MongoDB Atlas. I also built a deep learning neural network to classify dog breeds, and applied the model to identify the breed of dog featured in each Tweet. Web app users can choose a specific breed of dog and view Tweets including that breed. These data collection, cleaning, and storage processes have been fully automated (via a cron job), so the database accessed by the active web app is up to date with the most recent WeRateDogs Tweets (within 24 hours or less).
+The goal of this project was to deploy a web app to show some of the least-favorited dogs tweeted by the popular WeRateDogs Twitter account, with the ultimate goal of highlighting fundraising efforts that may have been underfunded when originally posted. I utilized the Twitter API to obtain Tweets from this account, and stored the resulting documents in a cloud database via MongoDB Atlas. I also built a deep learning neural network to classify dog breeds, and applied the model to identify the breed of dog featured in each Tweet. Web app users can choose a specific breed of dog and view Tweets including that breed. These data collection, cleaning, and storage processes have been fully automated (via a cron job), so the database accessed by the active web app is up to date with the most recent WeRateDogs Tweets (within 24 hours or less).
 
 
 ### Design
