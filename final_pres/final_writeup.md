@@ -31,15 +31,15 @@ After testing various combinations of optimizers, loss functions, dropout amount
 Below are a sample of the predictions from this model for unseen images (i.e., those tweeted by WeRateDogs). The model performs very well for images that have little or no material obscuring the dog's face/body; however, the model does not perform well when a majority of the dog's face/body are covered. The model also
 
 <p float="left" align="center">
-  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/american_staffordshire_terrier_example_pred.jpeg" height="512" />
-  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/eskimo_dog_example_pred.jpeg" height="512" />
+  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/american_staffordshire_terrier_example_pred.jpeg" height="400" />
+  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/eskimo_dog_example_pred.jpeg" height="400" />
   <br>
   <b>(Left) predicted breed:</b> American Staffordshire Terrier; <b>(right) predicted breed:</b> Eskimo Dog
 </p>
 
 <p float="left" align="center">
-  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/bernese_mountain_dog_example_pred.jpeg" height="512" />
-  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/italian_greyhound_example_pred.jpeg" height="512" />
+  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/bernese_mountain_dog_example_pred.jpeg" height="400" />
+  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/italian_greyhound_example_pred.jpeg" height="400" />
   <br>
   <b>(Left) predicted breed:</b> Bernese Mountain Dog; <b>(right) predicted breed:</b> Italian Greyhound
 </p>
