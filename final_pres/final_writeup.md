@@ -28,16 +28,15 @@ The baseline model is built with a U-Net-like architecture, following the exampl
 
 After testing various combinations of optimizers, loss functions, dropout amounts, etc., the final model includes dropout layers between each convolutional block, and `RMSprop` optimizer is used with the binary cross-entropy loss function. The architecture of the final model can be found [here](https://github.com/hmlewis-astro/street_network_deep_learning/blob/main/unet_final_model_architecture.png). The final model achieves an F1 = 0.690, and performs well on rural and urban landscapes, and varying road surfaces and densities.
 
-Below are a sample of the predicted road maps from the final model, with the satellite image on the left, the hand-annotated road map in the center, and the predicted road map on the right:
+Below are a sample of the predictions from this model for unseen images (i.e., those tweeted by WeRateDogs). The model performs very well for images that have little or no material obscuring the dog's face/body; however, the model does not perform well when a majority of the dog's face/body are covered. The model also
+
 <p float="left" align="center">
-  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/american_staffordshire_terrier_example_pred.jpeg" width="256" /><br>
-  <b>Predicted breed:</b> American Staffordshire Terrier
+  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/american_staffordshire_terrier_example_pred.jpeg" width="256" />
+  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/eskimo_dog_example_pred.jpeg" width="256" />
+  <br>
+  <b>(Left) predicted breed:</b> American Staffordshire Terrier; <b>(right) predicted breed:</b> Eskimo Dog
 </p>
 
-<p float="right" align="center">
-  <img src="https://github.com/hmlewis-astro/dogrates_tweet_engineering/blob/main/figures/eskimo_dog_example_pred.jpeg" width="256" /><br>
-  <b>Predicted breed:</b> Eskimo Dog
-</p>
 
 
 #### Application & Visualization
