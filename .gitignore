@@ -6,6 +6,9 @@
 *.pyc
 .ipynb_checkpoints/
 
+# Ignore log files
+*.log
+
 # Ignore data backups and notes
 data_backup/
 *.json

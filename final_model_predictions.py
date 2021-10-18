@@ -90,7 +90,8 @@ def preprocess(url):
 get_all_pred = False
 
 # Get model predictions for Tweeted media
-for tweet in tqdm(tweets.find(), total=tweets.estimated_document_count()):
+#for tweet in tqdm(tweets.find(), total=tweets.estimated_document_count()):
+for tweet in tweets.find():
     # Do not get model predictions if predictions already exist
     if not get_all_pred and 'predicted_breed' in tweet.keys():
         continue

@@ -72,7 +72,8 @@ else:
 # Get most recent Tweets
 new_tweets = []
 
-for tweet in tqdm(cursor, total=max_api_calls):
+#for tweet in tqdm(cursor, total=max_api_calls):
+for tweet in cursor:
     status = api.get_status(tweet._json['id'], tweet_mode='extended')
     if ('media' in status._json['entities']) and ('/10' in status._json['full_text']):
         new_tweets.append(status._json)
