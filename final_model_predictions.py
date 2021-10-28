@@ -75,7 +75,7 @@ image_shape = (image_size, image_size, 3)
 num_breeds = 120
 
 def preprocess(url):
-
+    #print(url)
     dat = tf.image.decode_jpeg(requests.get(url).content, channels=3, name="jpeg_reader")
 
     # convert images to floats, resize for ImageNet
@@ -87,7 +87,7 @@ def preprocess(url):
 
 # If True, gets model predictions for all Tweeted media, even if predictions already exist
 # If False, gets model predictions for only media without existing predictions
-get_all_pred = False
+get_all_pred = True
 
 # Get model predictions for Tweeted media
 #for tweet in tqdm(tweets.find(), total=tweets.estimated_document_count()):
