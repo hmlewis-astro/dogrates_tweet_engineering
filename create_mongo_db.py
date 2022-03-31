@@ -5,9 +5,9 @@ import os
 import json
 
 from pymongo import MongoClient
+import pymongo
 
-client = MongoClient()
-
+client = MongoClient(os.environ['MONGODB_ATLAS_CLUSTER'])
 ################################################################################
 # Get Tweets from given Twitter handle
 handle = 'dog_rates'

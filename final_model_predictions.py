@@ -24,7 +24,7 @@ import tensorflow_datasets as tfds
 
 from pymongo import MongoClient
 
-client = MongoClient()
+client = MongoClient(os.environ['MONGODB_ATLAS_CLUSTER'])
 
 ################################################################################
 # Get Tweets from given Twitter handle
