@@ -21,3 +21,11 @@ dogrates_pipeline_private_key.sh
 *.pptx
 final_pres/*.pptx
 
+# Ignore png/mov files
+*.png
+*.mov
+
+# Ignore old README version
+README_old.md
+
+
